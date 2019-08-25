@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your weigth in a place were you weigth less.</title>
+    </head>
+    <body>
+        <h1>Your weight in other planet</h1>
+        <p>In the earth your weigth is distinct than marth an jupiter.</p>
+        <script>
+            var user = prompt('What is your weight?')
+            var planet = parseInt(prompt("Choose your planet\n 1 is marth, 2 is Jupiter"));
+            var weight = parseInt(user)
+            var g_earth = 9.8;
+            var g_marth = 3.7;
+            var g_jupiter = 24.8;
+            var planet_name;
+            var final_weight;          
+            if(planet == 1)
+            {
+                final_weight = weight * g_marth / g_earth;
+                planet_name = "Marth";
+            }
+            else if(planet == 2)
+            {
+                final_weight = weight * g_jupiter / g_earth;
+                planet_name = "Jupiter"    
+            }
+            else
+            {
+                alert ("Please insert 1 or 2")
+            }
+
+            final_weight = parseInt(final_weight);
+
+            document.write("Your weigth in " + planet_name + " is " + "<strong>" + final_weight + "</strong>" + " kilograms");
+        </script>
+    </body>
+</html>

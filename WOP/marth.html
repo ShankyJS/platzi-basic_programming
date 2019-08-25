@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your weigth in a place were you weigth less.</title>
+    </head>
+    <body>
+        <h1>Your weight in other planet</h1>
+        <p>In the earth your weigth is distinct than marth an jupiter.</p>
+        <script>
+            var user = prompt('What is your weight?')
+            var weight = parseInt(user)
+            var g_earth = 9.8;
+            var g_marth = 3.7;
+            var g_jupiter = 24.8;
+            var final_weight;            
+            final_weight = weight * g_marth / g_earth;
+            final_weight = parseInt(final_weight);
+            document.write("Your weigth in Marth is " + "<strong>" + final_weight + "</strong>" + " kilograms");
+        </script>
+    </body>
+</html>
