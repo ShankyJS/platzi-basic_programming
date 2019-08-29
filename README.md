@@ -95,6 +95,8 @@ marth = (weight*gm) / g
 
 # The DOM: Our workplace in Web.
 
+(DOM FOLDER)
+
 Document model Object.
 
 All in our HTML is called: document
@@ -111,3 +113,40 @@ Document Object Model: is the way of the browser organize all our HTML content a
 Web as a tree: 
 
 HTML > HEAD > TITLE - BODY > H1 - P - SCRIPT.
+
+## Object Document
+
+
+[] document.write("this write in your document");
+
+When a variable is part of an object, the variable is an attribute or property, but when a function is part of an object its called method.
+
+Location is an attribute of window object. 
+
+_var_ route = window.location;
+
+Console.log sends messages by console (just for developers.)
+
+# Drawing in DOM
+
+0,0 inits in the top left corner.
+
+# Working with Functions
+
+When you are writing the same block of code a lot of times it's time to use a function, when you use:
+``
+lienzo.beginPath()
+``
+you are invoking a function, but if you want to initialize a new function, this is the correct syntax in JS.
+
+````
+function drawLine(color. initialx, initialy, finalx, finaly)
+{
+    lienzo.beginPath();
+    lienzo.strokeStyle = color;
+    lienzo.moveTo(initialx, initialy);
+    lienzo.lineTo(finalx, finaly);
+    lienzo.stroke();
+    lienzo.closePath(); 
+}
+````
