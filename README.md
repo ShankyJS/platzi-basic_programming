@@ -150,3 +150,20 @@ function drawLine(color. initialx, initialy, finalx, finaly)
     lienzo.closePath(); 
 }
 ````
+
+# Invoke a function. 
+
+``
+drawLine('red', 150, 200, 300);
+``
+## Using the While Cycle. 
+````
+while(l < lineas)
+{
+    yi = 10 * l;
+    xf = 10 * (l + 1);
+    drawLine('grey', 0, yi, xf, 300);
+    console.log('line number: ' +l);
+    l++;
+}
+````

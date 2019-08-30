@@ -1,5 +1,11 @@
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
+var lineas = 30;
+var l = 0;
+var yi, xf, yf;
+var iy, fx;
+var i = 0;
+
 
 function drawLine(color, initialx, initialy, finalx, finaly)
 {
@@ -10,52 +16,25 @@ function drawLine(color, initialx, initialy, finalx, finaly)
     lienzo.stroke();
     lienzo.closePath();
 }
-// lienzo.beginPath();
-// lienzo.strokeStyle="red";
-// lienzo.moveTo(150, 200);
-// lienzo.lineTo(250, 100);
-// lienzo.lineTo(200, 50);
-// lienzo.lineTo(150,100);
-// lienzo.lineTo(100, 50);
-// lienzo.lineTo(50,100);
-// lienzo.lineTo(150,200);
-// lienzo.stroke();
-// lienzo.closePath();
-//
-// lienzo.beginPath();
-// lienzo.strokeStyle="yellow";
-// lienzo.moveTo(150, 190);
-// lienzo.lineTo(240, 100);
-// lienzo.lineTo(200, 60);
-// lienzo.lineTo(150,110);
-// lienzo.lineTo(100, 60);
-// lienzo.lineTo(60,100);
-// lienzo.lineTo(150, 190);
-// lienzo.stroke();
-// lienzo.closePath();
-//
-// lienzo.beginPath();
-// lienzo.strokeStyle="green";
-// lienzo.moveTo(150, 180);
-// lienzo.lineTo(230, 100);
-// lienzo.lineTo(200, 70);
-// lienzo.lineTo(150,120);
-// lienzo.lineTo(100, 70);
-// lienzo.lineTo(70,100);
-// lienzo.lineTo(150, 180);
-// lienzo.stroke();
-// lienzo.closePath();
-//
-// var e = document.getElementById("rombito");
-// var cuarzo = e.getContext("2d");
-//
-// cuarzo.beginPath();
-// cuarzo.strokeStyle="black";
-// cuarzo.moveTo(100, 100);
-// cuarzo.lineTo(140, 100);
-// cuarzo.lineTo(160, 120);
-// cuarzo.lineTo(160, 150);
-// cuarzo.lineTo(120, 160);
-//
-// cuarzo.stroke();
-// cuarzo.closePath();
+
+for (l=0; l < lineas; l++)
+{
+    yi = 10 * l;
+    xf = 10 * (l+1);
+    drawLine('grey', 0, yi, xf, 300);
+    // console.log('line ' + l);
+}
+
+drawLine('grey', 1,1,1,300);
+drawLine('grey', 1, 299, 299 ,299);
+
+l = 0;
+do {
+    iy = (l*10);
+    fx = 300 - (l * 10);
+    drawLine('red', 300, iy, fx, 300);
+    console.log(iy, fx);
+    l = l+1;
+} while (l < lineas);
+
+
