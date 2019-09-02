@@ -167,3 +167,9 @@ while(l < lineas)
     l++;
 }
 ````
+## Adding an event on JavaScript.
+
+First we have to transport our ID to a JavaScript variable with: _var buttom = document.getElementById('object ID');_
+
+Next, we have to add an event listener 
+_buttom.addEventListener("click", actionDrawing);_

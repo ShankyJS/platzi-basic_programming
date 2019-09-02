@@ -1,3 +1,7 @@
+var text_lines = document.getElementById("text_lines");
+var buttom = document.getElementById("buttom");
+buttom.addEventListener("click", actionDrawing);
+
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 var lineas = 30;
@@ -5,7 +9,6 @@ var l = 0;
 var yi, xf, yf;
 var iy, fx;
 var i = 0;
-
 
 function drawLine(color, initialx, initialy, finalx, finaly)
 {
@@ -15,6 +18,11 @@ function drawLine(color, initialx, initialy, finalx, finaly)
     lienzo.lineTo(finalx, finaly);
     lienzo.stroke();
     lienzo.closePath();
+}
+
+function actionDrawing()
+{
+    alert("it works");
 }
 
 for (l=0; l < lineas; l++)
