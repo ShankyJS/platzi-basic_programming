@@ -172,3 +172,31 @@ while(l < lineas)
 First we have to transport our ID to a JavaScript variable with: ``var buttom = document.getElementById('object ID');``
 
 Next, we have to add an event listener ``buttom.addEventListener("click", actionDrawing);``
+
+When a variables value don't change a lot have to be on Upcase letters.
+
+A variable with a lot of data is a JSON.
+
+* [] Switch is a instruction that makes easier to read a lot of problems. 
+
+## Switch case and JSON
+A variable with a lot of data is a JSON.
+
+``
+var tecla = {
+    UP: 38,
+    DOWN: 40,
+    LEFT: 37,
+    RIGHT: 39
+}
+``
+Correct sintaxis 
+
+``
+ switch(event.keyCode)
+    {
+        case teclas.UP:
+            console.log("Up");
+        break;
+    }
+``

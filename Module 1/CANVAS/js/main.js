@@ -3,12 +3,10 @@ var buttom = document.getElementById("buttom");
 buttom.addEventListener("click", actionDrawing);
 
 var d = document.getElementById("dibujito");
+var width = d.width;
 var lienzo = d.getContext("2d");
-var lineas = 30;
-var l = 0;
-var yi, xf, yf;
-var iy, fx;
-var i = 0;
+
+
 
 function drawLine(color, initialx, initialy, finalx, finaly)
 {
@@ -22,27 +20,31 @@ function drawLine(color, initialx, initialy, finalx, finaly)
 
 function actionDrawing()
 {
-    alert("it works");
-}
+    var lineas = parseInt(text_lines.value);
+    var l = 0;
+    var yi, xf;
+    var iy, fx;
+    var i = 0;
+    var space = width / lineas;
 
-for (l=0; l < lineas; l++)
+    for (i=0; i < lineas; i++)
 {
-    yi = 10 * l;
-    xf = 10 * (l+1);
+    yi = space * i;
+    xf = space * (i+1);
     drawLine('grey', 0, yi, xf, 300);
     // console.log('line ' + l);
 }
 
-drawLine('grey', 1,1,1,300);
-drawLine('grey', 1, 299, 299 ,299);
-
-l = 0;
 do {
-    iy = (l*10);
-    fx = 300 - (l * 10);
+    iy = (l*space);
+    fx = 300 - (l * space);
     drawLine('red', 300, iy, fx, 300);
-    console.log(iy, fx);
     l = l+1;
 } while (l < lineas);
+
+drawLine('grey', 1,1,1,width-1);
+drawLine('red ', 1, width-1, width-1 ,width-1);
+}
+
 
 
