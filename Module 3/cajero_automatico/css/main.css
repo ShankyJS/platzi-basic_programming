@@ -16,14 +16,18 @@ body{
 }
 
 .text{
-    margin-right: 25%;
+    margin-right: 15%;
 }
-
+/* 
 .boton{
     margin-left: 1%;
-}
+} */
 
 p{
     color: black;
     font-family: 'Segoe UI';
+}
+
+.resultado{
+    color:white;
 }
