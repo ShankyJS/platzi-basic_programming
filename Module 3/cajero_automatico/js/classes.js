@@ -15,6 +15,6 @@ images[20] = "assets/20.jpg";
 images[50] = "assets/50.jpg";
 
 var coleccion = [];
-coleccion.push(new billetes(50,50,3));
-coleccion.push(new billetes(20,20,3));
-coleccion.push(new billetes(50,50,3));
+coleccion.push(new billetes(this.valor,50,3));
+coleccion.push(new billetes(this.valor,20,3));
+coleccion.push(new billetes(this.valor,50,3));
