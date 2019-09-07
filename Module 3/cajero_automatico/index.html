@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ATM</title>
 </head>
 <body>
-    <script src="js/main.js"></script>
+    <div class="main">
+        <p>
+            <h1>Welcome to your ATM</h1>
+        </p>
+        <div class="aside">
+            
+            <p>
+                <img src="assets/cajero.gif" alt="">
+            </p>
+            <p>
+            Insert how much do you want to extract
+            </p>
+            <p class="inputs">
+                <input type="text" id="money" class="text">
+                <input type="button" value="process" class="boton"> 
+            </p>
+        </div>
+        <p id="resultado"></p>
+    </div>
+    
+    <script src="js/classes.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
